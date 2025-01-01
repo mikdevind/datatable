@@ -21,7 +21,7 @@ Datatable.js adalah library sederhana yang membantu Anda untuk menampilkan data 
 3. Pastikan Anda memiliki elemen HTML untuk menampung tabel, seperti berikut:
 
 ```html
-<table id="datatables"></table>
+<div id="datatables" class="datatables"></div>
 ```
 
 ---
@@ -33,7 +33,7 @@ Berikut adalah contoh sederhana untuk menampilkan tabel data menggunakan Datatab
 ### Langkah 1: Siapkan Data
 Data harus berbentuk objek JSON dengan dua bagian utama:
 - **head**: Berisi definisi kolom, termasuk nama kolom dan properti tambahan (misalnya `max` untuk panjang maksimum teks).
-- **data**: Berisi array data yang akan ditampilkan.
+- **data**: Berisi definisi data yang akan ditampilkan.
 
 Contoh data:
 
@@ -41,14 +41,14 @@ Contoh data:
 const dataset = {
     "head": [
         {"name": "Nama"},
-        {"name": "Email", "max": 50},
+        {"name": "Email", "max": 50 },//max untuk maksimal karater
         {"name": "Nomor Telepon"},
         {"name": "Alamat"}
     ],
     "data": [
-        ["John Doe", "john.doe@example.com", "123456789", "Jl. Kebon Jeruk 1"],
-        ["Jane Smith", "jane.smith@example.com", "987654321", "Jl. Anggrek 2"],
-        ["Albert Einstein", "albert.einstein@example.com", "555444333", "Jl. Melati 3"]
+        {"Nama":"John Doe", "Email":"john.doe@example.com", "Nomor Telepon":"123456789", "Alamat":"Jl. Kebon Jeruk 1"},
+        {"Nama":"Jane Smith", "Email":"jane.smith@example.com", "Nomor Telepon":"987654321", "Alamat":"Jl. Anggrek 2"},
+        {"Nama":"Albert Einstein", "Email":"albert.einstein@example.com", "Nomor Telepon":"555444333", "Alamat":"Jl. Melati 3"}
     ]
 };
 ```
@@ -80,8 +80,8 @@ Ketika semua langkah diikuti, tabel interaktif akan ditampilkan di elemen dengan
            { "name": "Umur" }
        ],
        "data": [
-           ["Ali", 25],
-           ["Aisyah", 22]
+           ["Nama":"Ali", "Umur":25],
+           ["Nama":"Aisyah", "Umur":22]
        ]
    }
    ```
