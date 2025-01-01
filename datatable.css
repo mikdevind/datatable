@@ -1,0 +1,68 @@
+div.datatables .pagination {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+div.datatables .pagination button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+div.datatables .pagination button.active {
+    background-color: #c37e1b;
+    color: #fff;
+}
+div.datatables .pagination #pagination{
+	width: 100%;
+}
+div.datatables .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+div.datatables .controls .entries-select {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+div.datatables .controls input, div.datatables .controls select{
+	width: 210px;
+	max-width: calc(100% - 10px);
+	height: 35px;
+	border: grey solid 1px;
+	border-radius: 3px;
+	padding: 0 5px;
+	outline: none;
+}
+div.datatables .controls select{
+	width: 40px;
+}
+
+div.datatables .pagination button:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    border-color: #e9ecef;
+    cursor: not-allowed;
+}
+@media screen and (max-width: 500px) {
+	div.datatables .controls{
+		display: block;
+	}
+	div.datatables .controls div{
+		margin-bottom: 10px;
+	}
+	div.datatables .controls input{
+		width: 100%;
+	}
+	div.datatables .controls select{
+		width: calc(100% - 102px);
+		min-width: 35px;
+	}
+}
