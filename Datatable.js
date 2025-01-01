@@ -32,7 +32,7 @@ class DataTable {
         const searchInput = document.createElement("input");
         searchInput.type = "text";
         searchInput.placeholder = "Search...";
-        searchInput.oninput = (e) => searchTable(e.target.value);
+        searchInput.oninput = (e) => this.searchTable(e.target.value);
         const entriesSelect = document.createElement("select");
         [50, 100, 250, 500, 1000].forEach(value => {
             const option = document.createElement("option");
