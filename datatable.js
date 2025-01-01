@@ -1,7 +1,7 @@
 /*!DataTable v1.0.0 | (c) Ilman Hendrawan Saputra | MIKDevInd/license */
 class DataTable {
-    constructor(containerId, data) {
-        this.containerId = containerId;
+    constructor(containerQuery, data) {
+        this.containerQuery = containerQuery;
         this.data = [...data.data];
         this.filteredData = [...data.data];
         this.currentPage = 1;
@@ -12,7 +12,7 @@ class DataTable {
         this.init();
     }
     init(){
-    let container = document.getElementById(this.containerId);
+    let container = document.querySelector(this.containerQuery);
     if (this.filteredData.length > 0) {
         container.innerHTML = `
             <div id="controls" class="controls"></div>
@@ -27,7 +27,7 @@ class DataTable {
     }
 }
     generateControls() {
-        const controlsContainer = document.querySelector(`#${this.containerId} .controls`);
+        const controlsContainer = document.querySelector(`#${this.containerQuery} .controls`);
         controlsContainer.innerHTML = "";
         const searchInput = document.createElement("input");
         searchInput.type = "text";
@@ -55,7 +55,7 @@ class DataTable {
     }
 
     generateTable(dataSubset) {
-        const table = document.querySelector(`#${this.containerId} #dataTable`);
+        const table = document.querySelector(`#${this.containerQuery} #dataTable`);
         table.innerHTML = "";
         const thead = document.createElement("thead");
         const headerRow = document.createElement("tr");
@@ -133,7 +133,7 @@ class DataTable {
 
     generatePagination() {
         const totalPages = Math.ceil(this.filteredData.length / this.rowsPerPage);
-        const paginationContainer = document.querySelector(`#${this.containerId} #pagination`);
+        const paginationContainer = document.querySelector(`#${this.containerQuery} #pagination`);
         paginationContainer.innerHTML = "";
         const backButton = document.createElement("button");
         backButton.textContent = "Back";
