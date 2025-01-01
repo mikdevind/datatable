@@ -1,6 +1,6 @@
 # Datatable.js Documentation
 
-Datatable.js adalah library sederhana yang membantu Anda untuk menampilkan data dalam bentuk tabel interaktif di aplikasi web Anda. Dengan menggunakan Datatable.js, Anda dapat menambahkan kolom, mengatur lebar maksimum kolom, serta menyisipkan data dengan cara yang sangat mudah.
+Datatable.js adalah library sederhana yang membantu Anda untuk menampilkan data dalam bentuk tabel interaktif di aplikasi web Anda. Dengan menggunakan Datatable.js, Anda dapat menambahkan kolom, mengatur maksimum karakter pada kolom, serta menyisipkan data dengan cara yang sangat mudah.
 
 ---
 
@@ -9,7 +9,7 @@ Datatable.js adalah library sederhana yang membantu Anda untuk menampilkan data 
 1. Tambahkan file JavaScript `datatable.js` ke dalam proyek Anda.
 
 ```html
-<script type="text/javascript" src="/js/datatable.js"></script>
+<script type="text/javascript" src="/datatable.js"></script>
 ```
 
 2. Pastikan Anda memiliki elemen HTML untuk menampung tabel, seperti berikut:
