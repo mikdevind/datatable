@@ -27,7 +27,7 @@ class DataTable {
     }
 }
     generateControls() {
-        const controlsContainer = document.querySelector(`#${this.containerQuery} .controls`);
+        const controlsContainer = document.querySelector(`${this.containerQuery} .controls`);
         controlsContainer.innerHTML = "";
         const searchInput = document.createElement("input");
         searchInput.type = "text";
@@ -55,7 +55,7 @@ class DataTable {
     }
 
     generateTable(dataSubset) {
-        const table = document.querySelector(`#${this.containerQuery} #dataTable`);
+        const table = document.querySelector(`${this.containerQuery} #dataTable`);
         table.innerHTML = "";
         const thead = document.createElement("thead");
         const headerRow = document.createElement("tr");
@@ -133,7 +133,7 @@ class DataTable {
 
     generatePagination() {
         const totalPages = Math.ceil(this.filteredData.length / this.rowsPerPage);
-        const paginationContainer = document.querySelector(`#${this.containerQuery} #pagination`);
+        const paginationContainer = document.querySelector(`${this.containerQuery} #pagination`);
         paginationContainer.innerHTML = "";
         const backButton = document.createElement("button");
         backButton.textContent = "Back";
