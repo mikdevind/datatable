@@ -6,13 +6,19 @@ Datatable.js adalah library sederhana yang membantu Anda untuk menampilkan data 
 
 ## Instalasi
 
-1. Tambahkan file JavaScript `datatable.js` ke dalam proyek Anda.
+1. Tambahkan file JavaScript `Datatable.js` ke dalam proyek Anda.
 
 ```html
-<script type="text/javascript" src="/datatable.js"></script>
+<script type="text/javascript" src="Datatable.js"></script>
 ```
 
-2. Pastikan Anda memiliki elemen HTML untuk menampung tabel, seperti berikut:
+1. Tambahkan file CSS `Datatable.css` ke dalam proyek Anda.
+
+```html
+<link rel="stylesheet" type="text/css" href="Datatable.css">
+```
+
+3. Pastikan Anda memiliki elemen HTML untuk menampung tabel, seperti berikut:
 
 ```html
 <table id="datatables"></table>
@@ -52,7 +58,7 @@ Panggil library `DataTable` dan berikan data serta ID elemen tabel sebagai argum
 
 ```html
 <script>
-    new DataTable("datatables", dataset);
+    new DataTable("#datatables", dataset);
 </script>
 ```
 
